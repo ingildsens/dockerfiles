@@ -1,1 +1,8 @@
-FROM ....
+FROM ubuntu:16.04
+MAINTAINER ingildsens <simon-ing@hotmail.com>
+
+RUN apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt-get install encfs idle3 python3-pip git nano -y
+RUN mkdir -p /home/plex/.local-sorted/ /home/plex/local-sorted/ /home/plex/.acd-sorted/ /home/plex/acd-sorted/ ~/.cache/acd_cli/
+RUN easy_install3 pip
+RUN pip3 install --upgrade git+https://github.com/yadayada/acd_cli.git
+RUN touch ~/.cache/acd_cli/oauth_data
