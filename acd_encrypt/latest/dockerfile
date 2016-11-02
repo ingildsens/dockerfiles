@@ -30,5 +30,15 @@ mkdir -p \
 # create oauth_data
 touch ~/.cache/acd_cli/oauth_data && \
 
-# install pip and acd_cli
-pip3 install --upgrade git+https://github.com/yadayada/acd_cli.git \
+# install acd_cli
+pip3 install --upgrade git+https://github.com/yadayada/acd_cli.git
+
+# cleanup
+apt-get clean && \
+rm -rf \
+/tmp/* \
+/var/lib/apt/lists/* \
+/var/tmp/* 
+
+# keep running
+ENTRYPOINT ["/bin/bash"]
