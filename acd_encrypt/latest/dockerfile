@@ -31,7 +31,7 @@ mkdir -p \
 touch ~/.cache/acd_cli/oauth_data && \
 
 # install acd_cli
-pip3 install --upgrade git+https://github.com/yadayada/acd_cli.git
+pip3 install --upgrade git+https://github.com/yadayada/acd_cli.git && \
 
 # cleanup
 apt-get clean && \
