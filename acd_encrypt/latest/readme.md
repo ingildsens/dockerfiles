@@ -1,4 +1,4 @@
 Running the container:
 
-docker run -d -it --privileged ingildsens/acd_encrypt
+docker run -d -it --privileged --name acd_encrypt ingildsens/acd_encrypt
 
