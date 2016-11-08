@@ -36,7 +36,7 @@ pip3 install --upgrade git+https://github.com/yadayada/acd_cli.git && \
 
 # install plex
 wget -P ~/ https://downloads.plex.tv/plex-media-server/1.2.5.2966-3f767e7/plexmediaserver_1.2.5.2966-3f767e7_amd64.deb && \
-dpkg -i ~/plexmediaserver_1.2.5.2966-3f767e7_amd64.deb
+dpkg -i ~/plexmediaserver_1.2.5.2966-3f767e7_amd64.deb && \
 
 # cleanup
 apt-get clean && \
