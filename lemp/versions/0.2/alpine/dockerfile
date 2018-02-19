@@ -14,7 +14,7 @@ RUN \
 #passwd maintainer -d test1234 &&\
 #sed -i 's/root:x:0:root/root:x:0:root,maintainer/g' /etc/group
 
-apk --update --no-cache add nginx openrc &&\
+apk --update --no-cache add openrc nginx &&\
 mkdir -p /run/nginx
 
 
