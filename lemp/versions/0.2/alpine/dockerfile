@@ -8,7 +8,7 @@ RUN \
 # New user creation
 adduser ladmin -D &&\
 passwd ladmin -d test1234 &&\
-sed -i 's/ladmin:x:1000:/ladmin:x:1000:root/g' /etc/group
+sed -i 's/root:x:0:root/root:x:0:root,ladmin/g' /etc/group
 
 
 ENTRYPOINT ["/bin/sh"]
