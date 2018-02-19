@@ -6,9 +6,16 @@ MAINTAINER ingildsens (https://github.com/ingildsens)
 RUN \
 
 # New user creation
-adduser ladmin -D &&\
-passwd ladmin -d test1234 &&\
-sed -i 's/root:x:0:root/root:x:0:root,ladmin/g' /etc/group
+addgroup -S app &&\
+adduser -D -G app maintainer &&\
+passwd maintainer -d test1234
+
+
+
+
+#adduser ladmin -D &&\
+#passwd ladmin -d test1234 &&\
+#sed -i 's/root:x:0:root/root:x:0:root,ladmin/g' /etc/group
 
 
 ENTRYPOINT ["/bin/sh"]
