@@ -9,13 +9,12 @@ RUN \
 #addgroup -S app &&\
 #adduser -D -G app maintainer &&\
 #passwd maintainer -d test1234
+#addgroup -S app &&\
 
 
-
-addgroup -S app &&\
 adduser maintainer -D &&\
 passwd maintainer -d test1234 &&\
-sed -i 's/app:x:101:/app:x:101:maintainer/g' /etc/group
+sed -i 's/root:x:0:root/root:x:0:root,maintainer/g' /etc/group
 
 
 ENTRYPOINT ["/bin/sh"]
