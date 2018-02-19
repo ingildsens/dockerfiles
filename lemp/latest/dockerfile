@@ -1,5 +1,0 @@
-FROM alpine:3.7
-
-MAINTAINER ingildsens (https://github.com/ingildsens)
-
-ENTRYPOINT ["/bin/bash"]
