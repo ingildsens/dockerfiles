@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM ingildsens/alpine-openrc:0.1
 
 MAINTAINER ingildsens (https://github.com/ingildsens)
 
@@ -14,7 +14,7 @@ RUN \
 #passwd maintainer -d test1234 &&\
 #sed -i 's/root:x:0:root/root:x:0:root,maintainer/g' /etc/group
 
-apk --update --no-cache add openrc nginx &&\
+apk --update --no-cache add nginx &&\
 mkdir -p /run/nginx
 
 
