@@ -1,4 +1,4 @@
-FROM ingildsens/alpine-openrc:0.1
+FROM dockage/alpine-openrc:3.7
 
 MAINTAINER ingildsens (https://github.com/ingildsens)
 
