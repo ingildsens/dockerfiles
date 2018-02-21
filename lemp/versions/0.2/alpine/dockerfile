@@ -17,9 +17,7 @@ RUN \
 #mkdir -p /run/nginx
 
 apk update &&\
-apk add nginx &&\
-mkdir -p /run/nginx
-
+apk add nginx
 
 
 ENTRYPOINT ["/bin/sh"]
